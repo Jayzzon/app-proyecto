@@ -1,14 +1,27 @@
 import React, { useEffect, useState } from "react";
 //import { refrescos } from "../../bd/datos";
-
 import Axios from "../../services/Axios";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
-function Card() {
+export default function Card() {
 
   const [datos, setDatos]=useState([]);
 
   const urlImages="http://127.0.0.1:4000/images/"
-
+  
+  const Add = async () => {
+        toast.success("producto añadido al carrito correctamente!!", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
+        }
   const consultarDatos = async()=>{
     const consultar= await Axios.get("/producto/consultarProducto");
     setDatos(consultar.data);
@@ -43,7 +56,7 @@ function Card() {
                     Cantidad:{refresco.cantidad}&nbsp;
                   </label>
                   <button type="button" className="btn btn-outline-success">
-                    <i className="bi bi-cart4"></i>
+                    <i className="bi bi-cart4" onClick={Add}></i>
                   </button>
                 </div>
               </div>
@@ -54,5 +67,3 @@ function Card() {
     </div>
   );
 }
-
-export default Card;

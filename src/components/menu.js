@@ -41,7 +41,7 @@ function Menu(){
                   <button class="btn btn-outline-success" type="submit">Search</button>
                   <ul>
                     <li class="nav-item">
-                      <Link class="nav-link active" aria-current="page" to="#">
+                      <Link class="nav-link active" aria-current="page" to="/admin/login">
                         <button className="btn btn-info">
                         <i class="bi bi-person-square"></i>
                         </button>
