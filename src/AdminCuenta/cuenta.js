@@ -36,7 +36,7 @@ const Cuenta = () => {
       progress: undefined,
       theme: "dark",
       });
-    const guardar = await Axios.post("/login", valores); /* aqui va la direcion de la api resp   ("/", valores) */
+    const guardar = await Axios.post("http://127.0.0.1:4000/api/producto/login", valores); /* aqui va la direcion de la api resp   ("/", valores) */
   };
 
   return (
