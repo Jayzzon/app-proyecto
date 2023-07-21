@@ -10,6 +10,8 @@ export default function Editar() {
     cantidad: "",
     descripcion: "",
     image: "",
+    filename:"",
+    path:"",
   };
 
   const [saveDatos, setSaveDatos] = useState(variables);
@@ -121,7 +123,7 @@ export default function Editar() {
             id="validationDefault02"
             placeholder="Ingresa la imagen"
             name="image"
-            value={saveDatos.image}
+            //value={saveDatos.image}
             onChange={onChange}
             required
           />

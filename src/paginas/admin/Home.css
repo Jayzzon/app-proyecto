@@ -1,0 +1,8 @@
+.fondo{
+    width: 30;
+    src: "/image";
+    height:  30;
+    background-image: url("../../../public/image/colores.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

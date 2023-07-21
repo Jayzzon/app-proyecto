@@ -35,6 +35,15 @@ function Menu(){
                   <li class="nav-item">
                     <Link class="nav-link active" aria-current="page" to="/Soporte">Soporte</Link>
                   </li>
+                  <ul>
+                  <li class="nav-item">
+                      <Link class="nav-link active" aria-current="page" to="/client/carritolista">
+                        <button className="btn btn-info">
+                        <i class="bi bi-cart4"></i> 
+                        </button>
+                      </Link>
+                    </li>
+                  </ul>
                 </ul>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
